@@ -1,0 +1,76 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Universal Music Publishing Group</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/bootstrap-theme.css" rel="stylesheet" />
+<link href="css/site.css" rel="stylesheet" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/site.js"></script>
+
+</head>
+
+<body>
+<section class="bg-carousel">
+
+<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+    <span class="hero-image image-1"></span>
+    </div>
+    <div class="item">
+    <span class="hero-image image-2"></span>
+    </div>
+    <div class="item">
+    <span class="hero-image image-3"></span>
+    </div>
+  </div> 
+ </div>
+</section>
+  
+  <section class="nav-panel overlay">
+      <section class="tab-content">
+          <a class="close-icon" href="#" onClick="navBarHandler.closeNav()"></a>
+          <img class="logo-large" src="images/logo-large.png" />
+          <ul class="nav nav-pills" role="tablist">
+              <li role="presentation" class="mapTab americas-pill active"><a href="#americas" class="americas" aria-controls="americas" role="tab" data-toggle="tab" ><span></span>Americas</a></li>
+              <li role="presentation" class="mapTab europe-pill"><a href="#europe" class="europe" aria-controls="europe" role="tab" data-toggle="tab" "><span></span>Europe</a></li>
+              <li role="presentation" class="mapTab asiapacific-pill"><a href="#asiapacific" class="asiapacific" aria-controls="asiapacific" role="tab" data-toggle="tab" ><span></span>Asia Pacific</a></li>
+          </ul>
+
+        
+              <section role="tabpanel" class="tab-pane active" id="americas">
+                  <img class="map-large" src="images/large-map.png" />
+              </section>
+              <section role="tabpanel" class="tab-pane" id="europe">
+                  <img class="map-large" src="images/large-map.png" />
+                  <img class="europe-links" src="images/europe-links.png" />
+              </section>
+              <section role="tabpanel" class="tab-pane" id="asiapacific">
+                  <img class="map-large" src="images/large-map.png" />
+              </section>
+          </section>
+
+
+          <section class="collapsed-content">
+              <img class="logo-small" src="images/umpg-logo-small.png" />
+              <ul>
+                  <li><a class="americas" href="#" onClick="navBarHandler.openAmericasTab()"><span></span>Americas</a></li>
+                  <li><a class="europe" href="#" onClick="navBarHandler.openEuropeTab()"><span></span>Europe</a></li>
+                  <li><a class="asiapacific" href="#" onClick="navBarHandler.openAsiaTab()"><span></span>Asia Pacific</a></li>
+              </ul>
+          </section>
+      </section>
+</body>
+</html>

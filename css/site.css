@@ -1,0 +1,104 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+	html, body {font-family:Roboto, Arial, sans-serif;}
+	
+	/* START NAV PANEL STYLES */
+	
+	section.nav-panel {position:absolute; top:0px; left:0; width:170px; height:100%; z-index:100; background-color: rgba(255,255,255,0.9); overflow: hidden}
+	section.nav-panel.open {width:412px;}
+	
+	/* START NAV PANEL CLOSED */
+	
+	section.nav-panel img.logo-small {margin:12px;}
+	
+	section.nav-panel ul {list-style:none; position:relative; top:35%; margin:0; padding:0;}
+	section.nav-panel ul li {margin:1px 0px; padding:0;}
+    section.nav-panel ul li a {display:block; line-height:30px; padding:0; width:100%; text-decoration:none; color:#333; font-size:15px; font-weight:500;}
+	
+	section.nav-panel ul li a span {float:left; display:inline-block; height:30px; width:30px; margin:0px 6px 0px 10px; background:rgb(255,255,255) url(../images/continent-sprite.gif);}
+	section.nav-panel ul li a:hover,
+	section.nav-panel ul li a:active {background-color:rgb(2,119,189); color:rgb(255,255,255);}
+	
+	section.nav-panel ul li a.americas span {background-position:0px 0px;}
+	section.nav-panel ul li a.americas:hover span,
+	section.nav-panel ul li.active a.americas span {background-position:-30px 0px;}
+	
+	section.nav-panel ul li a.europe span {background-position:0px -30px;}
+	section.nav-panel ul li a.europe:hover span,
+	section.nav-panel ul li.active a.europe span {background-position:-30px -30px;}
+	
+	section.nav-panel ul li a.asiapacific span {background-position:0px -60px;}
+	section.nav-panel ul li a.asiapacific:hover span,
+	section.nav-panel ul li.active a.asiapacific span {background-position:-30px -60px;}
+	
+	/* END NAV PANEL CLOSED */
+	
+	/* START NAV PANEL OPEN */
+	section.nav-panel a.close-icon {position:absolute; top:10px; right:10px; display:block; height:17px; width:17px; background-image:url(../images/close-icon.png);}
+	img.logo-large {margin:60px 85px 50px 85px;}
+	
+	section.nav-panel ul.nav.nav-pills {margin:0 0 0 2px; top:auto;}
+	section.nav-panel ul.nav.nav-pills li {margin:0px 3px; padding:0px; text-align:center;}
+	section.nav-panel ul.nav.nav-pills li a {width:130px; padding:0px 0px;}
+    section.nav-panel ul.nav.nav-pills li a span {float:none; margin:0px 6px 0px 0px; vertical-align:middle;}
+	
+	img.map-large, img.europe-links {margin: 30px auto 10px 12px;}
+	img.europe-links {margin-top:10px;}
+
+	/* END NAV PANEL OPEN */
+	
+	/* END NAV PANEL STYLES */
+	
+	span.hero-image {display:block; width:100%; height:100%;}
+	
+	span.hero-image.image-1 {background-image:url(../images/nick-jonas.jpg); width:100%; height:100%;}
+	span.hero-image.image-2 {background-image:url(../images/demi-lovato.jpg); width:100%; height:100%;}
+	span.hero-image.image-3 {background-image:url(../images/mumford-and-sons.jpg); width:100%; height:100%;}
+	
+	.carousel-fade .carousel-inner .item {opacity:0; transition-property:opacity; transition-duration:4s; transition-timing-function:linear;}
+	.carousel-fade .carousel-inner .active {opacity:1;}
+
+	.carousel-fade .carousel-inner .active.left,
+	.carousel-fade .carousel-inner .active.right {left:0; opacity:0; z-index:1;}
+
+	.carousel-fade .carousel-inner .next.left,
+	.carousel-fade .carousel-inner .prev.right {opacity: 1;}
+
+	.carousel-fade .carousel-control {z-index: 2;}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+            /*height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
