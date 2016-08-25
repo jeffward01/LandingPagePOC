@@ -6,6 +6,11 @@ $(document).ready(function () {
 
     $(expadedContent).hide();
     //$(umpgLogoLarge).hide();
+    $('.carousel').carousel();
+    $('.carousel')
+        .carousel({
+            interval: 8000
+        });
 });
 
 
